@@ -1,4 +1,4 @@
-"# Parkinson's Disease Detection Web App
+Parkinson's Disease Detection Web App
 
 [Internship project, codeclause, Project level:Golden level]
 
@@ -29,7 +29,7 @@ The app analyzes 22 vocal attributes derived from patients’ voice recordings a
 
 
 \`\`\`
-├── app.py               # Main Flask application
+├── app.py            # Main Flask application
 ├── train_model.py       # Model training and saving logic
 ├── parkinsons.data      # Dataset file
 ├── templates/
