@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#3B0A35] flex items-center justify-center min-h-screen text-black p-4">
+  <div class="bg-gray-200 rounded-2xl shadow-2xl p-10 w-full max-w-lg text-center">
+    <h1 class="text-3xl font-bold mb-6 text-[#3B0A35]">Parkinson’s Prediction Result</h1>
+
+    <div class="bg-white rounded-xl px-6 py-5 shadow-inner">
+      <p class="text-2xl font-semibold mb-4 text-green-700">
+        {{ result }}
+      </p>
+      <p class="text-lg text-gray-800">Confidence: <span class="font-bold">{{ probability }}%</span></p>
+    </div>
+
+    <div class="mt-8 flex justify-center gap-4 flex-wrap">
+      <a href="/form" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition">
+        Try Another
+      </a>
+      <a href="/" class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">
+        Back to Home
+      </a>
+    </div>
+  </div>
+</body>
+</html>

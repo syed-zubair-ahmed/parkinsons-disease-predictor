@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parkinson's Prediction Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#2a001b] min-h-screen flex items-center justify-center p-6">
+  <div class="bg-gray-100 text-black p-10 rounded-2xl shadow-2xl w-full max-w-4xl">
+    <h1 class="text-4xl font-bold text-center mb-8">Parkinson’s Disease Prediction</h1>
+
+    <form action="/predict" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {% for field in [
+        ['fo', 'Fo (Hz)'], ['fhi', 'Fhi (Hz)'], ['flo', 'Flo (Hz)'],
+        ['jitter_percent', 'Jitter (%)'], ['jitter_abs', 'Jitter (Abs)'],
+        ['rap', 'RAP'], ['ppq', 'PPQ'], ['ddp', 'DDP'],
+        ['shimmer', 'Shimmer'], ['shimmer_db', 'Shimmer (dB)'],
+        ['apq3', 'APQ3'], ['apq5', 'APQ5'], ['apq', 'APQ'],
+        ['dda', 'DDA'], ['nhr', 'NHR'], ['hnr', 'HNR'],
+        ['rpde', 'RPDE'], ['dfa', 'DFA'], ['spread1', 'Spread1'],
+        ['spread2', 'Spread2'], ['d2', 'D2'], ['ppe', 'PPE']
+      ] %}
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-700">{{ field[1] }}</label>
+        <input type="number" step="0.00001" name="{{ field[0] }}" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white text-black" />
+      </div>
+      {% endfor %}
+
+      <div class="col-span-2 text-center mt-6">
+        <button type="submit"
+                class="px-8 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-900 transition duration-300">
+           Predict
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
