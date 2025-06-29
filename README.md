@@ -1,4 +1,6 @@
-echo "# Parkinson's Disease Detection Web App
+"# Parkinson's Disease Detection Web App
+
+[Internship project, codeclause, Project level:Golden level]
 
 This project is a web application that predicts the likelihood of Parkinson’s Disease based on biomedical voice features. It uses a trained machine learning model (initially Random Forest, with the option to use XGBoost) and is built with Flask, Scikit-learn, and styled using Tailwind CSS.
 
@@ -24,6 +26,8 @@ The app analyzes 22 vocal attributes derived from patients’ voice recordings a
 
 ## Project Structure
 
+
+
 \`\`\`
 ├── app.py               # Main Flask application
 ├── train_model.py       # Model training and saving logic
@@ -36,6 +40,8 @@ The app analyzes 22 vocal attributes derived from patients’ voice recordings a
 ├── scaler.pkl           # Saved scaler for input normalization
 ├── README.md            # Project overview
 \`\`\`
+
+
 
 ---
 
